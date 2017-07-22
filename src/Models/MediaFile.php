@@ -3,9 +3,22 @@ namespace Czim\CmsMediaModule\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class MediaFile
+ *
+ * @property int $id
+ * @property string $slug
+ * @property string $reference
+ * @property string $folder
+ * @property string $name
+ * @property string $description
+ * @property string $file
+ * @property string $uploader
+ * @property bool $image
+ */
 class MediaFile extends Model
 {
-    protected $table = 'media_library';
+    protected $table = 'media_files';
 
     protected $fillable = [
         'slug',
@@ -17,6 +30,11 @@ class MediaFile extends Model
         'uploader',
         'image',
     ];
+
+    protected $casts = [
+        'image' => 'boolean',
+    ];
+
 
     /**
      * Override to add configured database prefix

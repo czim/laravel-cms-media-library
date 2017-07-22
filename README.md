@@ -47,12 +47,18 @@ php artisan cms:migrate
 
 ## To Do
 
-[ ] Database design & migrations
-[ ] Configurable folders
-[ ] Permissions and permission configuration
-[ ] API endpoints
-[ ] shortcode logic for making links & including images
-[ ] Automatic resizes
+- [ ] storage abstraction interface
+- [ ] resizes
+    - [ ] automatic
+    - [ ] use storage in a sensible/abstract way
+- [ ] hook/manipulator interface
+    - [ ] content type based hooks, wildcards
+
+- [ ] Database design & migrations
+- [ ] Configurable folders
+- [ ] Permissions and permission configuration
+- [ ] shortcode logic for making links & including images
+- [ ] API endpoints
 
 ## Usage
 

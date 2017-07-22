@@ -56,17 +56,23 @@ return [
     |
     */
 
-    'store' => [
+    'models' => [
+        'media' => Czim\CmsMediaModule\Models\MediaFile::class,
+    ],
 
-        // Available drivers:
-        // 's3', 'filesystem'
-        'driver' => 'filesystem',
+    // Available drivers:
+    // 's3', 'filesystem'
+    'storage-driver' => 'filesystem',
 
-        // Configuration options per driver
+    // Configuration options per driver
+    'storage' => [
+
+        // Local filesystem storage
         'filesystem' => [
             'directory' => 'cms-media-library',
         ],
 
+        // S3 storage
         's3' => [
             'prefix' => 'cms-media-library',
         ],
